@@ -143,7 +143,7 @@ Trudność znalezienia logarytmu dyskretnego jest podstawą istnienia wielu algo
 				if ( (Z_5(i)==4) && (Z_11(i)==7) ){ System.out.println( i ); }
 			}}
 
-		if (false){
+		if (true){
 			for (int i=0;i<1000000;i++){
 				if ( (Z_7(i)==6) && (Z_13(i)==7) && (Z_5(i)==4) && (Z_11(i)==7) ){ System.out.println( i ); }
 			}}
