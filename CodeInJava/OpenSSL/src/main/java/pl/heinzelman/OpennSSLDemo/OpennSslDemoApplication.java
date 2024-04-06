@@ -24,8 +24,10 @@ public class OpennSslDemoApplication {
 	//  https://www.javacodegeeks.com/2020/04/encrypt-with-openssl-decrypt-with-java-using-openssl-rsa-public-private-keys.html
 
 
+	// openssl enc -aes-256-cbc -k secret -P -md sha1
 
-		Rsa4096	rsa = new Rsa4096( "C:\\Users\\John\\Desktop\\AlgorytmyIBezpieczenstwo\\CodeInJava\\OpenSSL\\private_key_rsa_4096_pkcs8-generated.pem", "C:\\Users\\John\\Desktop\\AlgorytmyIBezpieczenstwo\\CodeInJava\\OpenSSL\\public_key_rsa_4096_pkcs8-exported.pem" );
+		String path="C:\\Users\\John\\Desktop\\AlgorytmyIBezpieczenstwo\\CodeInJava\\OpenSSL\\";
+		Rsa4096	rsa = new Rsa4096( path+"private_key_rsa_4096_pkcs8-generated.pem", path+"public_key_rsa_4096_pkcs8-exported.pem" );
 
 
 		String expected = getFileAsString("C:\\Users\\John\\Desktop\\AlgorytmyIBezpieczenstwo\\CodeInJava\\OpenSSL\\file_unencrypted.txt");
