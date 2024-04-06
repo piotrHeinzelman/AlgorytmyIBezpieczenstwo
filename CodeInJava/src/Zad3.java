@@ -7,10 +7,11 @@ public class Zad3 {
 
     public char[] Vigenere( char[] datagram, char[] key ) throws Exception {
         char[] chars = new char[ datagram.length ];
-        for (int i=0;i<datagram.length;i++) {
-            int A=datagram[i];
-            int K=key[i];
-            chars[i] = (char) (A^K);
+        for (int i=0, j=0; i<datagram.length;i++,j++) {
+            int A=datagram[i]; A=A-65;
+            if ( j==key.length ) {j=0;}
+            int K=key[j];      K=K-65;
+            chars[i] = (char) (((A+K) %26)+65);
         }
         return chars;
     }
