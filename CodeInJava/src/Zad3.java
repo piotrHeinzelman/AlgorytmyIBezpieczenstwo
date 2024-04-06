@@ -3,6 +3,20 @@ import java.nio.CharBuffer;
 
 public class Zad3 {
 
+
+
+    public char[] Vigenere( char[] datagram, char[] key ) throws Exception {
+        char[] chars = new char[ datagram.length ];
+        for (int i=0;i<datagram.length;i++) {
+            int A=datagram[i];
+            int K=key[i];
+            chars[i] = (char) (A^K);
+        }
+        return chars;
+    }
+
+
+
     public char[] vernam( char[] datagram, char[] key ) throws Exception {
         if ( datagram.length!=key.length ) throw new Exception("niezgodne długości");
         char[] chars = new char[ datagram.length ];

@@ -3,7 +3,16 @@ import java.io.File;
 public class Main {
     public static void main(String[] args) throws Exception {
 
-        Zad3 zad3 = new Zad3();
+
+        if (false) {
+            Cwiczenie2 C = new Cwiczenie2();
+            C.run();
+
+        }
+        else {
+
+
+            Zad3 zad3 = new Zad3();
         /*
         char[] datagram=new char[28];
             datagram="SchowalemKluczPodWycieraczka".toCharArray(); // dont use UTF-8
@@ -19,13 +28,15 @@ public class Main {
         System.out.println( cos ); //@1To2JesT3Moj4TajnY5Klucz6@!  coś = klucz
 
         */
-        String fileName = "myFile.txt";
-        char[] chars = zad3.fileToCharAry(fileName);
-        System.out.println( chars );
+            String fileName = "myFile.txt";
+            char[] chars = zad3.fileToCharAry(fileName);
+            char[] key = "ADMIN".toUpperCase().toCharArray();
 
-        String fileNameOut = "myFile.out";
-        zad3.charAryToFile( fileNameOut, chars );
+            char[] C = zad3.Vigenere(chars, key);
 
+            String fileNameOut = "myFile.out";
+            zad3.charAryToFile(fileNameOut, C );
+        }
     }
 
 
